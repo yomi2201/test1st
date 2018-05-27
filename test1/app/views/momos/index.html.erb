@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Momos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Body</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @momos.each do |momo| %>
+      <tr>
+        <td><%= momo.title %></td>
+        <td><%= momo.body %></td>
+        <td><%= link_to 'Show', momo %></td>
+        <td><%= link_to 'Edit', edit_momo_path(momo) %></td>
+        <td><%= link_to 'Destroy', momo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Momo', new_momo_path %>

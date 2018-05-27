@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @momo.title %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @momo.body %>
+</p>
+
+<%= link_to 'Edit', edit_momo_path(@momo) %> |
+<%= link_to 'Back', momos_path %>
